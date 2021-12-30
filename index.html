@@ -12,10 +12,40 @@
   <div class="container">
     <div class="logo"></div>
     <div class="calculator">
-      <div class="calculator__bill"></div>
-      <div class="calculator__selectTip"></div>
-      <div class="calculator__people"></div>
-      <div class="calculator__results"></div>
+      <div class="calculator__input">
+        <label for="">Bill</label>
+        <span></span><input type="text">
+      </div>
+      <div class="calculator__selectTip">
+        <label for="">Select Tip %</label>
+        <button class="calculator__button">5%</button>
+        <button class="calculator__button">10%</button>
+        <button class="calculator__button">15%</button>
+        <button class="calculator__button">25%</button>
+        <button class="calculator__button">50%</button>
+        <button class="calculator__button">Custom</button>
+      </div>
+      <div class="calculator__input">
+        <label for="">Number of People</label>
+        <span id="logo__People"></span><input type="text">
+      </div>
+      <div class="calculator__results">
+        <div class="calculator_result">
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <div class="result__number">$0.00</div>
+        </div>
+        <div class="calculator_result">
+          <div>
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <div class="result__number">$0.00</div>
+        </div>
+        <button class="result__button">RESET</button>
+      </div>
     </div>
   </div>
   

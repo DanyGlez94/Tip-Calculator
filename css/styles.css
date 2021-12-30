@@ -32,9 +32,18 @@ body {
     margin: 30px auto;
 }
 .calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--White);
     width: 100%;
     height: 90vh;
     padding: 25px;
     border-radius: 20px 20px 0 0;
+}
+.calculator__input  label {
+    display: block;
+}
+.calculator__input input {
+    width: 100%;
 }
