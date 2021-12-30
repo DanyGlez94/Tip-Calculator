@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 768px)"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -12,46 +13,52 @@
   <div class="container">
     <div class="logo"></div>
     <div class="calculator">
-      <div class="calculator__input">
-        <label for="">Bill</label>
-        <span></span><input type="text">
-      </div>
-      <div class="calculator__selectTip">
-        <label for="">Select Tip %</label>
-        <button class="calculator__button">5%</button>
-        <button class="calculator__button">10%</button>
-        <button class="calculator__button">15%</button>
-        <button class="calculator__button">25%</button>
-        <button class="calculator__button">50%</button>
-        <button class="calculator__button">Custom</button>
-      </div>
-      <div class="calculator__input">
-        <label for="">Number of People</label>
-        <span id="logo__People"></span><input type="text">
-      </div>
-      <div class="calculator__results">
-        <div class="calculator_result">
-          <div>
-            <p>Tip Amount</p>
-            <p>/ person</p>
-          </div>
-          <div class="result__number">$0.00</div>
+      <div class="calculator__leftSide">
+        <div class="calculator__input">
+          <label for="">Bill</label>
+          <span class="calculator__icon" id="logo__dollar"></span><input type="text" placeholder="0">
         </div>
-        <div class="calculator_result">
-          <div>
-            <p>Total</p>
-            <p>/ person</p>
+        <div class="calculator__selectTip">
+          <label for="">Select Tip %</label>
+          <div class="calculator__buttons">
+            <button class="calculator__button">5%</button>
+            <button class="calculator__button">10%</button>
+            <button class="calculator__button">15%</button>
+            <button class="calculator__button">25%</button>
+            <button class="calculator__button">50%</button>
+            <input class="calculator__button" id="custom__input" type="text" placeholder="Custom">
           </div>
-          <div class="result__number">$0.00</div>
         </div>
-        <button class="result__button">RESET</button>
+        <div class="calculator__input">
+          <label for="">Number of People</label>
+          <span class="calculator__icon" id="logo__People"></span><input type="text" placeholder="0">
+        </div>
       </div>
+      <div class="calculator__rightSide">
+        <div class="calculator__results">
+          <div class="calculator__result">
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="result__number">$0.00</div>
+          </div>
+          <div class="calculator__result">
+            <div>
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="result__number">$0.00</div>
+          </div>
+          <button class="result__button">RESET</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/DanyGlez94" target="_blank">Daniel Gonzalez</a>.
     </div>
   </div>
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Daniel Gonzalez</a>.
-  </div> -->
 </body>
 </html>

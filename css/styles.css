@@ -24,7 +24,7 @@ body {
     height: 100vh;
 }
 .logo {
-    background-image: url(/tip-calculator-app-main/images/logo.svg);
+    background-image: url(/images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
@@ -34,16 +34,164 @@ body {
 .calculator {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: var(--White);
     width: 100%;
     height: 90vh;
     padding: 25px;
     border-radius: 20px 20px 0 0;
 }
-.calculator__input  label {
+.calculator__leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.calculator__input,
+.calculator__selectTip {
+    margin-bottom: 25px;
+}
+.calculator__input  label,
+.calculator__selectTip label {
     display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 .calculator__input input {
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
     width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--Light-grayish-cyan2);
+    color: var(--Very-dark-cyan);
+    text-align: right;
+    padding-right: 13px;
+    caret-color: var(--Strong-cyan);
+}
+.calculator__input input:hover {
+    outline: 2px solid var(--Strong-cyan);
+}
+.calculator__input input:focus-visible {
+    outline: 2px solid var(--Strong-cyan);
+}
+.calculator__input input::placeholder {
+    font-family: var(--MonoFont);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan2);
+    text-align: right;
+    position: absolute;
+    top: 2px;
+    right: 13px;
+}
+#custom__input {
+    background-color: var(--Light-grayish-cyan2);
+    color: var(--Very-dark-cyan);
+    cursor: text;
+    text-align: center;
+    transition: none;
+    font-weight: 700;
+    caret-color: var(--Strong-cyan);
+
+}
+#custom__input:hover {
+    outline: 2px solid var(--Strong-cyan);
+}
+#custom__input::placeholder {
+    text-align: center;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+}
+#custom__input:focus-visible {
+    outline: 2px solid var(--Strong-cyan);
+}
+.calculator__icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 13px;
+    width: 14px;
+    height: 14px;
+}
+#logo__People {
+    background-image: url(/images/icon-person.svg);
+}
+#logo__dollar {
+    background-image: url(/images/icon-dollar.svg);
+}
+.calculator__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.calculator__button {
+    display: inline-block;
+    width: 47%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-size: 22px;
+    font-family: var(--MonoFont);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.calculator__button:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+.calculator__results {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.calculator__result {
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+}
+.calculator__result p:first-child {
+    color: var(--White);
+    font-size: 13px;
+}
+.calculator__result p:last-child {
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+.result__number {
+    color: var(--Strong-cyan);
+    font-size: 24px;
+    font-weight: 700;
+}
+.result__button {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: 20px;
+    font-family: var(--MonoFont);
+    font-weight: 700;
+    opacity: .3;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.result__button:hover {
+    opacity: 1;
+}
+.attribution {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
 }
