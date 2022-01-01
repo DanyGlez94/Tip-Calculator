@@ -120,7 +120,7 @@ peopleInput.addEventListener('keyup', (e) => {
             return;
         }
         else { //Hace el cálculo 
-            total.innerText = '$' + tip / peopleInput.value;
+            total.innerText = '$' + (tip / peopleInput.value).toFixed(2);
         }
     }
 });
