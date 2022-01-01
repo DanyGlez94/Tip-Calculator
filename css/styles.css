@@ -54,6 +54,9 @@ body {
     color: #C7786B;
     /* outline: 2px solid #C7786B; */
 }
+.noZeroInput {
+    outline: 2px solid #C7786B !important;
+}
 .calculator__input  label,
 .calculator__selectTip label {
     display: block;

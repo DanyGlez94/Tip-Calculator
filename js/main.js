@@ -21,15 +21,18 @@ billInput.addEventListener('keyup', (e) => {
         billInput.value = inputValue.replace(reg, '');
         noZeroBill.innerText = "Can't be zero";
         noZeroBill.classList.add('noZero');
+        billInput.classList.add('noZeroInput');
     }  
     else if(billInput.value == 0) {
         tipAmount.innerText = '$0.00'
         noZeroBill.innerText = "";
         noZeroBill.classList.remove('noZero');
+        billInput.classList.remove('noZeroInput');
     } 
     else {
         noZeroBill.innerText = "";
         noZeroBill.classList.remove('noZero');
+        billInput.classList.remove('noZeroInput');
     }
 });
 
@@ -43,10 +46,9 @@ buttons.addEventListener('click', (e) => {
     else if (billInput.value == 0) {
         noZeroBill.innerText = "Can't be zero";
         noZeroBill.classList.add('noZero');
+        billInput.classList.add('noZeroInput');
     }
     else {
-        // noZeroPpl.innerText = "";
-        // noZeroPpl.classList.remove('noZero');
         const tipAmountCalc = (a, b) => (a * b)/100;
         tipAmount.innerText = "$" + tipAmountCalc(billInput.value, buttonSelected);
     }
@@ -68,6 +70,7 @@ customPercent.addEventListener('keyup', (e) => {
     if (billInput.value == 0) {
         noZeroBill.innerText = "Can't be zero";
         noZeroBill.classList.add('noZero');
+        billInput.classList.add('noZeroInput');
         tipAmount.innerText = '$0.00';
     } 
     else if (inputValue == 0) {
@@ -93,12 +96,15 @@ peopleInput.addEventListener('keyup', (e) => {
         peopleInput.value = inputValue.replace(reg, '');
         noZeroPpl.innerText = "Can't be zero";
         noZeroPpl.classList.add('noZero');
+        peopleInput.classList.add('noZeroInput');
     }
     else if (billInput.value == 0) { //Valido que haya un dato ingresado en bill
         noZeroBill.innerText = "Can't be zero";
         noZeroBill.classList.add('noZero');
+        billInput.classList.add('noZeroInput');
         noZeroPpl.innerText = "";
         noZeroPpl.classList.remove('noZero');
+        peopleInput.classList.remove('noZeroInput');
     }
     else { //Ingreso un número que no es 0 y bill no está vacío
         let tipNumber = tipAmount.innerText.substring(1);
@@ -128,4 +134,6 @@ resetButton.addEventListener('click', () => {
     total.innerText = '$0.00';
     noZeroBill.innerText = '';
     noZeroPpl.innerText = '';
+    billInput.classList.remove('noZeroInput');
+    peopleInput.classList.remove('noZeroInput');
 });
