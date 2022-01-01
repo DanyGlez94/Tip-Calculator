@@ -128,10 +128,10 @@ body {
     height: 14px;
 }
 #logo__People {
-    background-image: url(/images/icon-person.svg);
+    background-image: url(images/icon-person.svg);
 }
 #logo__dollar {
-    background-image: url(/images/icon-dollar.svg);
+    background-image: url(images/icon-dollar.svg);
 }
 .calculator__buttons {
     display: flex;
