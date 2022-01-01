@@ -15,23 +15,31 @@
     <div class="calculator">
       <div class="calculator__leftSide">
         <div class="calculator__input">
-          <label for="">Bill</label>
-          <span class="calculator__icon" id="logo__dollar"></span><input type="text" placeholder="0">
+          <div style="display: flex; justify-content: space-between;">
+            <label for="billInput">Bill</label>
+            <label id="noZeroBill" for="billInput"></label>
+          </div>
+          <span class="calculator__icon" id="logo__dollar"></span>
+          <input id="billInput" type="text" placeholder="0" maxlength="5">
         </div>
         <div class="calculator__selectTip">
           <label for="">Select Tip %</label>
           <div class="calculator__buttons">
-            <button class="calculator__button">5%</button>
-            <button class="calculator__button">10%</button>
-            <button class="calculator__button">15%</button>
-            <button class="calculator__button">25%</button>
-            <button class="calculator__button">50%</button>
-            <input class="calculator__button" id="custom__input" type="text" placeholder="Custom">
+            <button id="fivePercent" class="calculator__button">5%</button>
+            <button id="tenPercent" class="calculator__button">10%</button>
+            <button id="fifteenPercent" class="calculator__button">15%</button>
+            <button id="twentyfivePercent" class="calculator__button">25%</button>
+            <button id="fiftyPercent" class="calculator__button">50%</button>
+            <input class="calculator__button" id="custom__input" type="text" placeholder="Custom" maxlength="2">
           </div>
         </div>
         <div class="calculator__input">
-          <label for="">Number of People</label>
-          <span class="calculator__icon" id="logo__People"></span><input type="text" placeholder="0">
+          <div style="display: flex; justify-content: space-between;">
+            <label for="peopleInput">Number of People</label>
+            <label id="noZeroPpl" for="peopleInput"></label>
+          </div>
+          <span class="calculator__icon" id="logo__People"></span>
+          <input id="peopleInput" type="text" placeholder="0" maxlength="2">
         </div>
       </div>
       <div class="calculator__rightSide">
@@ -41,16 +49,16 @@
               <p>Tip Amount</p>
               <p>/ person</p>
             </div>
-            <div class="result__number">$0.00</div>
+            <div id="tipAmount" class="result__number">$0.00</div>
           </div>
           <div class="calculator__result">
             <div>
               <p>Total</p>
               <p>/ person</p>
             </div>
-            <div class="result__number">$0.00</div>
+            <div id="totalNumber" class="result__number">$0.00</div>
           </div>
-          <button class="result__button">RESET</button>
+          <button id="resetButton" class="result__button">RESET</button>
         </div>
       </div>
     </div>
@@ -59,6 +67,6 @@
       Coded by <a href="https://github.com/DanyGlez94" target="_blank">Daniel Gonzalez</a>.
     </div>
   </div>
-  
+  <script src="/js/main.js"></script>
 </body>
 </html>

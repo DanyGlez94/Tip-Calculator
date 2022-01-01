@@ -49,6 +49,11 @@ body {
 .calculator__selectTip {
     margin-bottom: 25px;
 }
+.calculator__input .noZero {
+    display: block;
+    color: #C7786B;
+    /* outline: 2px solid #C7786B; */
+}
 .calculator__input  label,
 .calculator__selectTip label {
     display: block;
@@ -69,6 +74,8 @@ body {
     text-align: right;
     padding-right: 13px;
     caret-color: var(--Strong-cyan);
+    transition: .3s ease all;
+    outline: 2px solid var(--White);
 }
 .calculator__input input:hover {
     outline: 2px solid var(--Strong-cyan);
@@ -94,7 +101,8 @@ body {
     transition: none;
     font-weight: 700;
     caret-color: var(--Strong-cyan);
-
+    outline: 2px solid var(--White);
+    transition: .3s ease all;
 }
 #custom__input:hover {
     outline: 2px solid var(--Strong-cyan);
@@ -142,6 +150,10 @@ body {
     transition: .3s;
 }
 .calculator__button:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+.calculator__button:focus {
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
