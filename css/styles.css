@@ -57,6 +57,14 @@ body {
 .noZeroInput {
     outline: 2px solid #C7786B !important;
 }
+#billInput::-webkit-inner-spin-button, 
+#billInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#billInput[type=number] {
+    -moz-appearance: textfield;
+}
 .calculator__input  label,
 .calculator__selectTip label {
     display: block;

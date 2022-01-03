@@ -13,6 +13,7 @@
   <div class="container">
     <div class="logo"></div>
     <div class="calculator">
+      <!-- Calculator left side -->
       <div class="calculator__leftSide">
         <div class="calculator__input">
           <div style="display: flex; justify-content: space-between;">
@@ -20,7 +21,7 @@
             <label id="noZeroBill" for="billInput"></label>
           </div>
           <span class="calculator__icon" id="logo__dollar"></span>
-          <input id="billInput" type="text" placeholder="0" maxlength="5">
+          <input id="billInput" type="number" pattern="\d*\.\d*" placeholder="0" onkeypress="if (this.value.length===8) return false;">
         </div>
         <div class="calculator__selectTip">
           <label for="">Select Tip %</label>
@@ -42,6 +43,8 @@
           <input id="peopleInput" type="text" placeholder="0" maxlength="2">
         </div>
       </div>
+      <!-- /Calculator left side -->
+      <!-- Calculator right side -->
       <div class="calculator__rightSide">
         <div class="calculator__results">
           <div class="calculator__result">
@@ -61,12 +64,14 @@
           <button id="resetButton" class="result__button">RESET</button>
         </div>
       </div>
+      <!-- /Calculator right side -->
+
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/DanyGlez94" target="_blank">Daniel Gonzalez</a>.
     </div>
   </div>
-  <script src="js/main.js" type="text/javascript"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

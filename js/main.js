@@ -14,8 +14,8 @@ billInput.addEventListener('keyup', (e) => {
     let reg = /^0+/gi;
 
     billInput.value = inputValue
-    .replace(/\s/g, '')
-    .replace(/\D/g, '');
+    .replace(/\s/g, '');
+    // .replace(/\D/g, '');
 
     if (inputValue.match(reg)) {
         billInput.value = inputValue.replace(reg, '');
@@ -49,7 +49,7 @@ buttons.addEventListener('click', (e) => {
         billInput.classList.add('noZeroInput');
     }
     else {
-        const tipAmountCalc = (a, b) => (a * b)/100;
+        const tipAmountCalc = (a, b) => ((a * b)/100).toFixed(2);
         tipAmount.innerText = "$" + tipAmountCalc(billInput.value, buttonSelected);
     }
 });
@@ -77,7 +77,7 @@ customPercent.addEventListener('keyup', (e) => {
         tipAmount.innerText = '$0.00';
     }
     else {
-        const tipAmountCalc = (a, b) => (a * b)/100;
+        const tipAmountCalc = (a, b) => ((a * b)/100).toFixed(2);
         tipAmount.innerText = "$" + tipAmountCalc(billInput.value, inputValue);
     }
 });
