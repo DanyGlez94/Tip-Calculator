@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 768px)"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 920px)"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-  <div class="container">
-    <div class="logo"></div>
+  <main class="container">
+    <h1 class="logo"></h1>
     <div class="calculator">
       <!-- Calculator left side -->
-      <div class="calculator__leftSide">
+      <section class="calculator__leftSide">
         <div class="calculator__input">
           <div style="display: flex; justify-content: space-between;">
             <label for="billInput">Bill</label>
             <label id="noZeroBill" for="billInput"></label>
           </div>
           <span class="calculator__icon" id="logo__dollar"></span>
-          <input id="billInput" type="number" pattern="\d*\.\d*" placeholder="0" onkeypress="if (this.value.length===8) return false;">
+          <input id="billInput" type="number" placeholder="0" onkeypress="if (this.value.length===8) return false;">
         </div>
         <div class="calculator__selectTip">
-          <label for="">Select Tip %</label>
+          <label>Select Tip %</label>
           <div class="calculator__buttons">
             <button id="fivePercent" class="calculator__button">5%</button>
             <button id="tenPercent" class="calculator__button">10%</button>
@@ -42,10 +44,10 @@
           <span class="calculator__icon" id="logo__People"></span>
           <input id="peopleInput" type="text" placeholder="0" maxlength="2">
         </div>
-      </div>
+      </section>
       <!-- /Calculator left side -->
       <!-- Calculator right side -->
-      <div class="calculator__rightSide">
+      <section class="calculator__rightSide">
         <div class="calculator__results">
           <div class="calculator__result">
             <div>
@@ -63,7 +65,7 @@
           </div>
           <button id="resetButton" class="result__button">RESET</button>
         </div>
-      </div>
+      </section>
       <!-- /Calculator right side -->
 
     </div>
@@ -71,7 +73,7 @@
       Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/DanyGlez94" target="_blank">Daniel Gonzalez</a>.
     </div>
-  </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>

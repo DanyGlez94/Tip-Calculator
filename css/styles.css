@@ -21,33 +21,39 @@ body {
     font-family: var(--MonoFont);
     color: var(--Dark-grayish-cyan);
     width: 100%;
-    height: 100vh;
 }
 .logo {
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 80px;
-    height: 50px;
-    margin: 30px auto;
+    width: 87px;
+    height: 53px;
+    margin: 50px auto 41px auto;
 }
 .calculator {
     display: flex;
     flex-direction: column;
     background-color: var(--White);
     width: 100%;
-    height: 90vh;
-    padding: 25px;
+    height: 789px;
+    padding: 16px 0;
     border-radius: 20px 20px 0 0;
 }
 .calculator__leftSide{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .calculator__input,
+.calculator__selectTip,
+.calculator__rightSide {
+    margin: 16px 32px;
+}
+.calculator__input {
+    height: 78px;
+}
 .calculator__selectTip {
-    margin-bottom: 25px;
+    height: 216px;
 }
 .calculator__input .noZero {
     display: block;
@@ -68,16 +74,21 @@ body {
 .calculator__input  label,
 .calculator__selectTip label {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+}
+.calculator__input label {
     margin-bottom: 8px;
+}
+.calculator__selectTip label {
+    margin-bottom: 16px;
 }
 .calculator__input input {
     font-family: inherit;
     font-size: 24px;
     font-weight: 700;
     width: 100%;
-    height: 40px;
+    height: 48px;
     border: none;
     border-radius: 5px;
     background-color: var(--Light-grayish-cyan2);
@@ -100,9 +111,6 @@ body {
     font-weight: 700;
     color: var(--Dark-grayish-cyan2);
     text-align: right;
-    position: absolute;
-    top: 2px;
-    right: 13px;
 }
 #custom__input {
     background-color: var(--Light-grayish-cyan2);
@@ -121,7 +129,7 @@ body {
 #custom__input::placeholder {
     text-align: center;
     font-weight: 700;
-    color: var(--Very-dark-cyan);
+    color: #547878;
 }
 #custom__input:focus-visible {
     outline: 2px solid var(--Strong-cyan);
@@ -130,13 +138,15 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    margin-top: 13px;
-    margin-left: 13px;
-    width: 14px;
-    height: 14px;
+    margin-top: 16px;
+    margin-left: 19px;
+    width: 10px;
+    height: 15px;
 }
 #logo__People {
     background-image: url(../images/icon-person.svg);
+    width: 13px;
+    height: 16px;
 }
 #logo__dollar {
     background-image: url(../images/icon-dollar.svg);
@@ -149,14 +159,15 @@ body {
 .calculator__button {
     display: inline-block;
     width: 47%;
-    height: 40px;
+    height: 48px;
     border-radius: 5px;
     border: none;
     background-color: var(--Very-dark-cyan);
     color: var(--White);
-    font-size: 22px;
+    font-size: 24px;
     font-family: var(--MonoFont);
-    margin-bottom: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
     cursor: pointer;
     transition: .3s;
 }
@@ -169,49 +180,50 @@ body {
     color: var(--Very-dark-cyan);
 }
 .calculator__results {
+    height: 257px;
     background-color: var(--Very-dark-cyan);
     border-radius: 15px;
-    padding: 20px;
+    padding: 37px 24px 24px;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 .calculator__result {
     display: flex;
     justify-content: space-between;
     cursor: default;
+    height: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 .calculator__result p:first-child {
     color: var(--White);
-    font-size: 13px;
+    font-size: 16px;
 }
 .calculator__result p:last-child {
-    font-size: 11px;
-    margin-bottom: 20px;
+    font-size: 13px;
 }
 .result__number {
     color: var(--Strong-cyan);
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 32px;
 }
 .result__button {
     display: inline-block;
     width: 100%;
-    height: 40px;
-    margin-top: 20px;
+    height: 48px;
+    margin-top: 12px;
     border-radius: 5px;
     border: none;
-    background-color: var(--Strong-cyan);
-    color: var(--Very-dark-cyan);
+    background-color: #0D686D;
+    color: #00474B;
     font-size: 20px;
     font-family: var(--MonoFont);
     font-weight: 700;
-    opacity: .3;
     transition: 0.3s;
     cursor: pointer;
 }
 .result__button:hover {
-    opacity: 1;
+    background-color: var(--Strong-cyan);
 }
 .attribution {
     display: none;
